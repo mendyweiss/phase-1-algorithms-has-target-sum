@@ -5,7 +5,7 @@ function hasTargetSum(array, target) {
   for (let i = 0; i < array.length; i++) {
     if (i === (array.length -1)) {
       return false
-    } else {//if(i !== currentIteration){
+    } else {
       for (let j = 0; j < array.length; j++) {
         if (i !== j && (array[i] + array[j]) == target){
           return true

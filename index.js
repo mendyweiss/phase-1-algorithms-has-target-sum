@@ -1,5 +1,21 @@
+//Write a function that calculates whether or not 2 numbers in the given array equal the given target, return true or false
+
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let currentIteration = 0
+  for (let i = 0; i < array.length; i++) {
+    if(i !== currentIteration){
+      currentIteration++ ;
+      for (let j = 0; j < array.length; j++) {
+        if (i !== j && (array[i] + array[j]) == target){
+          return true
+        }
+      }
+    } else if (i === (array.length -1)) {
+      return false
+    }
+  } 
+
 }
 
 /* 
@@ -8,6 +24,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  for num if num + loop index = target, return true
+
+
 */
 
 /*
